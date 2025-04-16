@@ -18,8 +18,8 @@ function add() {
         <span class="price">${priceBox.value}</span>
         </span>
         <span>
-        <button onclick="edit(this)" class="btn">Edit</button>
-        <button onclick="del(this)" class="btn">Delete</button>
+        <button onclick="edit(this)" class="btn"><i class="fa-solid fa-pen"></i></button>
+        <button onclick="del(this)" class="btn"><i class="fa-solid fa-trash"></i></button>
         </span>
         </li>`
 
@@ -55,10 +55,6 @@ function edit(btn) {
     priceSpan.textContent = price;
 }
 
-
-
-
-
 function del(delBtn) {
     let li = delBtn.parentNode.parentNode;
     let price = parseFloat(li.querySelector(".price").textContent) || 0;
@@ -68,6 +64,5 @@ function del(delBtn) {
 
     li.remove();
 }
-
 
 
